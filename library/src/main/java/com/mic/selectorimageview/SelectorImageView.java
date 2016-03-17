@@ -1,6 +1,7 @@
 package com.mic.selectorimageview;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
@@ -11,6 +12,9 @@ import android.widget.ImageView;
 
 public class SelectorImageView extends ImageView {
 
+    private static final int DEFAULT_FILTER_COLOR = Color.GRAY;
+
+    private int mFilterColor;
     private boolean mIsOutside;
     private boolean mIsLongClick;
     private LongPressedRunnable mLongPressedRunnable;
@@ -22,6 +26,7 @@ public class SelectorImageView extends ImageView {
     public SelectorImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
         mLongPressedRunnable = new LongPressedRunnable();
+        initAttrs(context, attrs);
     }
 
     @Override
@@ -46,10 +51,16 @@ public class SelectorImageView extends ImageView {
         return true;
     }
 
+    private void initAttrs(Context context, AttributeSet attrs) {
+        TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SelectorImageView);
+        mFilterColor = a.getColor(R.styleable.SelectorImageView_filterColor, DEFAULT_FILTER_COLOR);
+        a.recycle();
+    }
+
     private void setFilter() {
         Drawable drawable = getDrawable() == null ? getBackground() : getDrawable();
         if (drawable != null)
-            drawable.setColorFilter(Color.GRAY, PorterDuff.Mode.MULTIPLY);
+            drawable.setColorFilter(mFilterColor, PorterDuff.Mode.MULTIPLY);
     }
 
     private void clearFilter() {
