@@ -26,6 +26,10 @@ public class SelectorImageView extends ImageView {
         initAttrs(attrs);
     }
 
+    public void setFilterColor(int color) {
+        mFilterColor = color;
+    }
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getActionMasked()) {
