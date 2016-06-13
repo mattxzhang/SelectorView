@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import com.chrischeng.selectorimageview.SelectorImageView;
+import com.chrischeng.selectorview.SelectorImageView;
 
 public class MainActivity extends Activity {
 

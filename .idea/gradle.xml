@@ -10,14 +10,14 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/sample" />
-            <option value="$PROJECT_DIR$/selectorimageview" />
+            <option value="$PROJECT_DIR$/selectorview" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/sample" />
-            <option value="$PROJECT_DIR$/selectorimageview" />
+            <option value="$PROJECT_DIR$/selectorview" />
           </set>
         </option>
       </GradleProjectSettings>

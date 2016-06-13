@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.chrischeng.selectorimageview">
+    package="com.chrischeng.selectorview">
 
     <application
         android:allowBackup="true"

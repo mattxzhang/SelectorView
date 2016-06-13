@@ -1,4 +1,4 @@
-package com.chrischeng.selectorimageview;
+package com.chrischeng.selectorview;
 
 import org.junit.Test;
 
