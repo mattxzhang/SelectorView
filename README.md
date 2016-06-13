@@ -1,15 +1,15 @@
-# SelectorImageView
-Implemention of selector when clicked by one drawable on android.widget.ImageView.
+# SelectorView
+Implemention of selector when pressed by one drawable on view.
 ## Usage
 Add the dependencies to your gradle file:
 ```javascript
 dependencies {
-    compile 'com.chrischeng:selectorimageview:1.0.0'
+    compile 'com.chrischeng:selectorview:1.0.1'
 }
 ```
 **XML:**
 ```xml
-<com.chrischeng.selectorimageview.SelectorImageView
+<com.chrischeng.selectorview.SelectorImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:siv_filter_color="0xffcccccc"/> //default
